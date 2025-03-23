@@ -1,0 +1,78 @@
+% Horario Latex
+
+\documentclass[extrafontsizes, 20pt]{memoir}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage[a3paper, left=0.5in, right=0.5in, top=0.5in, bottom=0.5in, landscape]{geometry}
+\usepackage[sc]{mathpazo}
+\linespread{1.05}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{multicol, multirow}
+\usepackage{array}
+\usepackage{nicematrix}
+
+% Definición de nuevos tipos de columnas
+\newcolumntype{x}[1]{>{\centering\hspace{0pt}}p{#1}}
+\newcolumntype{y}[1]{>{\raggedleft\hspace{0pt}}p{#1}}
+\newcommand{\tn}{\tabularnewline}
+\renewcommand{\arraystretch}{1.3}
+
+% Definición de colores
+\definecolor{ICI-TIUV226}{HTML}{ffb3ba}
+\definecolor{ICI212}{HTML}{ffcc99}
+\definecolor{ICI222}{HTML}{ffff99}
+\definecolor{ICI313}{HTML}{99ff99}
+\definecolor{ICI314}{HTML}{99ccff}
+\definecolor{ICI316}{HTML}{cc99ff}
+
+% Comandos para formatear
+\newcommand{\subject}[2]{\textbf{#1} \\ \small #2}
+
+\begin{document}
+
+\pagenumbering{gobble}
+
+\centering
+\vspace{0.5cm}
+
+\tiny % Tamaño de fuente reducido
+
+\begin{table}[!h]
+\centering
+\setlength{\arrayrulewidth}{0.5pt}
+\begin{NiceTabular}{|c|x{6cm}|x{6cm}|x{6cm}|x{6cm}|x{6cm}|}[first-row, first-col, cell-space-limits=2pt]
+& & \textbf{Lunes} & \textbf{Martes} & \textbf{Miércoles} & \textbf{Jueves} & \textbf{Viernes} \tn\hline
+
+\rotatebox[origin=c]{90}{\textbf{A.M}} &
+08h30 & & \cellcolor{ICI314}{\subject{ICI314}{Sala 102, G.Astudillo}} & & \cellcolor{ICI314}{\subject{ICI314}{Sala 102, G.Astudillo}} & \tn\hline
+&09h15 & & \cellcolor{ICI314}{\subject{ICI314}{Sala 102, G.Astudillo}} & & \cellcolor{ICI314}{\subject{ICI314}{Sala 102, G.Astudillo}} & \tn\hline
+&10h15 & \cellcolor{ICI212}{\subject{ICI212}{Sala 107, R.Rocco}} & \cellcolor{ICI316}{\subject{ICI316}{Sala 210, E.stimado}} & \cellcolor{ICI212}{\subject{ICI212}{Sala 107, R.Rocco}} & \cellcolor{ICI314}{\subject{ICI314}{Sala 102, G.Astudillo}} & \cellcolor{ICI212}{\subject{ICI212}{Sala 107, R.Rocco}} \tn\hline
+&11h00 & \cellcolor{ICI212}{\subject{ICI212}{Sala 107, R.Rocco}} & \cellcolor{ICI316}{\subject{ICI316}{Sala 210, E.stimado}} & \cellcolor{ICI212}{\subject{ICI212}{Sala 107, R.Rocco}} & \cellcolor{ICI314}{\subject{ICI314}{Sala 102, G.Astudillo}} & \cellcolor{ICI212}{\subject{ICI212}{Sala 107, R.Rocco}} \tn\hline &
+
+\multicolumn{7}{|c|}{\textbf{(Almuerzo)}} \tn\hline
+
+\rotatebox[origin=c]{90}{\textbf{P.M}} &
+14h30 & \cellcolor{ICI-TIUV226}{\subject{ICI-TIUV226}{Sala 102, K.Dance}} & \cellcolor{ICI313}{\subject{ICI313}{Sala 103, A.Inostroza}} & \cellcolor{ICI222}{\subject{ICI222}{Sala 103, D.Erraz}} & & \cellcolor{ICI222}{\subject{ICI222}{Sala 103, D.Erraz}} \tn\hline
+&15h15 & \cellcolor{ICI-TIUV226}{\subject{ICI-TIUV226}{Sala 102, K.Dance}} & \cellcolor{ICI313}{\subject{ICI313}{Sala 103, A.Inostroza}} & \cellcolor{ICI222}{\subject{ICI222}{Sala 103, D.Erraz}} & & \cellcolor{ICI222}{\subject{ICI222}{Sala 103, D.Erraz}} \tn\hline
+&16h15 & & \cellcolor{ICI313}{\subject{ICI313}{Sala 103, A.Inostroza}} & & & \cellcolor{ICI222}{\subject{ICI222}{Sala 103, D.Erraz}} \tn\hline
+&17h00 & & \cellcolor{ICI313}{\subject{ICI313}{Sala 103, A.Inostroza}} & & & \cellcolor{ICI222}{\subject{ICI222}{Sala 103, D.Erraz}} \tn\hline
+&17h45 & & & & & \tn\hline
+
+\end{NiceTabular}
+\end{table}
+
+\vspace{-0.5cm}
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{!{\vrule width 1pt}x{3cm}!{\vrule width 1pt}p{7cm}!{\vrule width 1pt}x{3cm}!{\vrule width 1pt}p{7cm}!{\vrule width 1pt}}\hline
+    \cellcolor{ICI-TIUV226}{\subject{ICI-TIUV226}{Sala 102, K.Dance}} & Taller de Integración Perfil Sello UV I & \cellcolor{ICI212}{\subject{ICI212}{Sala 107, R.Rocco}} & Física Mecánica \tn
+    \cellcolor{ICI222}{\subject{ICI222}{Sala 103, D.Erraz}} & Ecuaciones Diferenciales & \cellcolor{ICI313}{\subject{ICI313}{Sala 103, A.Inostroza}} & Estructuras de Datos \tn
+    \cellcolor{ICI314}{\subject{ICI314}{Sala 102 y 103, G.Astudillo}} & Arquitectura de Computadores & \cellcolor{ICI316}{\subject{ICI316}{Sala 210, E.stimado}} & Fundamentos de Ingeniería de Software \tn\hline
+\end{tabular}
+\end{table}
+
+\vfill
+\end{document}
