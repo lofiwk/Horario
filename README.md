@@ -1,0 +1,1 @@
+22/3/2025: inicio de proyecto en latex para alcanzar un horario "bonito" y editable, manteniendo una buena estructura de datos y optimización de espacio.  Presenta problemas en la fila de 14.30 hrs, y me gustaría ponerle un color a la multicelda de almuerzo.
